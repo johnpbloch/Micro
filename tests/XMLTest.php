@@ -19,6 +19,20 @@ XML;
 		$control = simplexml_load_string($xml);
 		$test = \Micro\XML::from($data);
 		$this->assertEquals($control, $test);
+		$data = array(
+			'Test',
+			'Array',
+		);
+		$xml = <<<XML
+<?xml version = '1.0' encoding = 'utf-8'?>
+<foo>
+	<bar>Test</bar>
+	<bar>Array</bar>
+</foo>
+XML;
+		$control = simplexml_load_string($xml);
+		$test = \Micro\XML::from($data, 'foo', NULL, 'bar');
+		$this->assertEquals($control, $test);
 	}
 
 }
