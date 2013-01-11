@@ -40,7 +40,7 @@ class XML
 
 			if(is_scalar($v))
 			{
-				$xml->addChild($k, h($v));
+				$xml->addChild($k, htmlspecialchars($v, ENT_QUOTES, 'utf-8'));
 			}
 			else
 			{
