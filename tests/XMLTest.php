@@ -19,6 +19,7 @@ XML;
 		$control = simplexml_load_string($xml);
 		$test = \Micro\XML::from($data);
 		$this->assertEquals($control, $test);
+
 		$data = array(
 			'Test',
 			'Array',
@@ -33,6 +34,7 @@ XML;
 		$control = simplexml_load_string($xml);
 		$test = \Micro\XML::from($data, 'foo', NULL, 'bar');
 		$this->assertEquals($control, $test);
+
 		$data = array(
 			'Test',
 			'Array',
@@ -49,6 +51,7 @@ XML;
 		$control = simplexml_load_string($xml);
 		$test = \Micro\XML::from($data);
 		$this->assertEquals($control, $test);
+
 		$data = array(
 			'Test',
 			'Array',
