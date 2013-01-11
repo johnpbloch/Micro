@@ -33,6 +33,22 @@ XML;
 		$control = simplexml_load_string($xml);
 		$test = \Micro\XML::from($data, 'foo', NULL, 'bar');
 		$this->assertEquals($control, $test);
+		$data = array(
+			'Test',
+			'Array',
+			'baz' => 'Bat',
+		);
+		$xml = <<<XML
+<?xml version = '1.0' encoding = 'utf-8'?>
+<data>
+	<element>Test</element>
+	<element>Array</element>
+	<baz>Bat</baz>
+</data>
+XML;
+		$control = simplexml_load_string($xml);
+		$test = \Micro\XML::from($data);
+		$this->assertEquals($control, $test);
 	}
 
 }
