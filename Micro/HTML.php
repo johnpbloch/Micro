@@ -46,7 +46,7 @@ class HTML
 		$h = '';
 		foreach($attributes as $k => $v)
 		{
-			$h .= " $k=\"" . h($v) . '"';
+			$h .= " $k=\"" . htmlspecialchars($v, ENT_QUOTES, 'utf-8') . '"';
 		}
 		return $h;
 	}

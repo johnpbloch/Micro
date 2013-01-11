@@ -91,7 +91,7 @@ class Error
 		foreach($lines as $i => $line)
 		{
 			$html .= '<b>' . sprintf('%' . mb_strlen($number + $padding) . 'd', $i + 1) . '</b> '
-				. ($i + 1 == $number ? '<em>' . h($line) . '</em>' : h($line));
+				. ($i + 1 == $number ? '<em>' . htmlspecialchars($line, ENT_QUOTES, 'utf-8') . '</em>' : htmlspecialchars($line, ENT_QUOTES, 'utf-8'));
 		}
 		return $html;
 	}
