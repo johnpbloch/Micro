@@ -34,7 +34,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 
 	public function test___to_string()
 	{
-
+		$this->assertEquals('Default View', trim($this->view));
 	}
 
 }
