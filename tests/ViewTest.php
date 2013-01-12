@@ -35,6 +35,9 @@ class ViewTest extends PHPUnit_Framework_TestCase
 	public function test___to_string()
 	{
 		$this->assertEquals('Default View', trim($this->view));
+		$this->view = new View('variables');
+		$this->view->set(array('text' => 'World'));
+		$this->assertEquals('Hello World!', trim($this->view));
 	}
 
 }
