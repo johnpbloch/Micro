@@ -38,6 +38,8 @@ class ViewTest extends PHPUnit_Framework_TestCase
 		$this->view = new View('variables');
 		$this->view->set(array('text' => 'World'));
 		$this->assertEquals('Hello World!', trim($this->view));
+		$this->view->set(array('text' => 'Universe'));
+		$this->assertEquals('Hello Universe!', trim($this->view));
 	}
 
 }
