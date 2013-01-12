@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ .'/mock/View.php';
+include_once __DIR__ . '/mocks/View.php';
 
 class ViewTest extends PHPUnit_Framework_TestCase
 {
