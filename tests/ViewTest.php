@@ -6,7 +6,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 	public function setUp()
 	{
 		parent::setUp();
-		$this->view = new View('default');
+		$this->view = new \Micro\View('default');
 	}
 
 	/**
@@ -34,7 +34,7 @@ class ViewTest extends PHPUnit_Framework_TestCase
 	public function test___to_string()
 	{
 		$this->assertEquals('Default View', trim($this->view));
-		$this->view = new View('variables');
+		$this->view = new \Micro\View('variables');
 		$this->view->set(array('text' => 'World'));
 		$this->assertEquals('Hello World!', trim($this->view));
 		$this->view->set(array('text' => 'Universe'));
