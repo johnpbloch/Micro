@@ -3,6 +3,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 require __DIR__ . '/tests/mocks/mocker-class.php';
+require __DIR__ . '/tests/mocks/mock-functions.php';
 
 \Micro\View::$directory = __DIR__ . '/tests/views/';
 
